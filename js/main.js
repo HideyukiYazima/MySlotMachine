@@ -11,7 +11,7 @@
 
       this.stop = document.createElement('div');
       this.stop.textContent = 'STOP';
-      this.stop
+      this.stop.classList.add('stop');
     }
   }
 }
