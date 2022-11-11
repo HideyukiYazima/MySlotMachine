@@ -16,6 +16,12 @@
       this.stop.classList.add('stop');
       this.stop.addEventListener('click', () => {
         clearTimeout(this.timeoutId);
+        
+        panelsLeft--;
+        
+        if (panelsLeft === 0) {
+        checkResult();
+        }
       });
 
       section.appendChild(this.img);
@@ -47,6 +53,8 @@
     new Panel(),
     new Panel(),
   ];
+
+  let panelsLeft = 3;
 
   const spin = document.getElementById('spin');
   spin.addEventListener('click', () => {
